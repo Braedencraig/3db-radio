@@ -1,11 +1,6 @@
 import { createClient } from "contentful";
 import { PodcastInfo } from "../../components/PodcastInfo";
 
-const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-});
-
 export default function PodcastDetails({ podcast }) {
   return (
     <div className="margin-top">
@@ -15,6 +10,11 @@ export default function PodcastDetails({ podcast }) {
 }
 
 export const getStaticPaths = async () => {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+
   const response = await client.getEntries({
     content_type: "podcast",
   });
@@ -32,6 +32,11 @@ export const getStaticPaths = async () => {
 };
 
 export async function getStaticProps({ params }) {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+
   const { items } = await client.getEntries({
     content_type: "podcast",
     "fields.slug": params.slug,
