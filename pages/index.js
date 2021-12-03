@@ -1,7 +1,46 @@
-export default function Recipes() {
+import { createClient } from 'contentful'
+import { Manifesto } from '../components/Manifesto'
+import { Meta } from '../components/Meta'
+import { PodcastInfoWrapper } from '../components/PodcastInfoWrapper'
+import { PodcastThumbnailWrapper } from '../components/PodcastThumbnailWrapper'
+import { TeamMembers } from '../components/TeamMembers';
+import { Contact } from '../components/Contact';
+
+
+export default function Homepage({ podcasts, teamMembers, information, seo, contactInfo }) {
   return (
-    <div className="recipe-list">
-      Recipe List
-    </div>
+    <>
+      <Meta seo={seo} />
+      <h1 style={{display: 'none'}}>3dB</h1>
+      <Manifesto information={information} />
+      <div className='divider special' />
+      <PodcastInfoWrapper podcasts={podcasts} />
+      <div className='divider' />
+      <PodcastThumbnailWrapper podcasts={podcasts} />
+      <div className='divider' />
+      <TeamMembers teamMembers={teamMembers} />
+      <div className='divider' />
+      <Contact contactInfo={contactInfo} />
+    </>
   )
+}
+
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  })
+
+  const data = await client.getEntries()
+
+  return {
+    props: {
+      podcasts: data.items.filter(item => item.sys.contentType.sys.id === 'podcast'),
+      teamMembers: data.items.filter(item => item.sys.contentType.sys.id === 'teamMember'),
+      information: data.items.filter(item => item.sys.contentType.sys.id === 'information'),
+      seo: data.items.filter(item => item.sys.contentType.sys.id === 'seo'),
+      contactInfo: data.items.filter(item => item.sys.contentType.sys.id === 'contact')
+    },
+    revalidate: 1
+  }
 }
