@@ -39,7 +39,7 @@ body:after {
   content: "";
   height: 300%;
   left: -50%;
-  opacity: 0.25;
+  opacity: 0.35;
   position: fixed;
   top: -110%;
   width: 300%;
