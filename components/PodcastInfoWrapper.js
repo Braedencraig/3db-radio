@@ -30,7 +30,9 @@ export const PodcastInfoWrapper = ({ podcasts }) => {
   return (
     <Slider {...settings}>
       {podcasts.map((podcast) => (
-        <PodcastInfo key={podcast.sys.id} podcast={podcast} />
+        <div className="margin-slide">
+          <PodcastInfo key={podcast.sys.id} podcast={podcast} />
+        </div>
       ))}
     </Slider>
   )
