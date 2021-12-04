@@ -260,6 +260,8 @@ a {
 .border p {
   margin-top: 0;
   line-height: 1.5;
+  position: relative;
+  z-index: 10;
   font-size: 18px;
   font-family: "AuthenticSansLight", sans-serif;
 }
@@ -347,6 +349,8 @@ ul.control-dots {
   margin-bottom: 50px;
   font-family: "AuthenticSansLight", sans-serif;
   text-transform: lowercase;
+  position: relative;
+  z-index: 10;
 }
 
 a {
@@ -709,12 +713,19 @@ p{
     width: 90%;
     margin: 0 auto;
     margin-bottom: 60px;
+    position: relative;
+    z-index: 10;
     border: 15px solid transparent;
     border-image: url("/assets/mediumborder.png") 30 stretch;
   }
 
   ul {
     width: 70%;
+  }
+
+  .flex-2 {
+    position: relative;
+    z-index: 10;
   }
 
   .flex-2 h3 {
