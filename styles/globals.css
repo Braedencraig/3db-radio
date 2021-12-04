@@ -339,8 +339,10 @@ ul.control-dots {
   max-width: 250px;
 }
 
-.slide a:hover {
-  opacity: 0.6;
+@media (hover: hover) and (pointer: fine) {
+  .slide a:hover {
+    opacity: 0.6;
+  }
 }
 
 .contact {
@@ -362,8 +364,10 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-.contact a:hover {
-  opacity: 0.6;
+@media (hover: hover) and (pointer: fine) {
+  .contact a:hover {
+    opacity: 0.6;
+  }
 }
 
 .contact-page {
@@ -620,8 +624,10 @@ a {
   transform: scaleX(0);
 }
 
-.hover:hover:before {
-  transform: scaleX(1);
+@media (hover: hover) and (pointer: fine) {
+  .hover:hover:before {
+    transform: scaleX(1);
+  }
 }
 
 a.hover {
