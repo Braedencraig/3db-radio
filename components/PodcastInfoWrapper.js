@@ -1,9 +1,15 @@
-import { PodcastInfo } from "../components/PodcastInfo";
-import Slider from "react-slick";
-import { useWindowSize } from "use-window-size-hook";
+import { useEffect, useState } from 'react'
+import { PodcastInfo } from "../components/PodcastInfo"
+import Slider from "react-slick"
 
 export const PodcastInfoWrapper = ({ podcasts }) => {
-  const { width } = useWindowSize();
+  const [mobile, setMobile] = useState(false)
+
+  useEffect(() => {
+    if(window.innerWidth < 1200) {
+      setMobile(true)
+    }
+  }, [])
 
   const settings = {
     centerMode: true,
@@ -11,7 +17,9 @@ export const PodcastInfoWrapper = ({ podcasts }) => {
     className: "slides",
     variableWidth: true,
   };
-  if (width < 1200) {
+
+  if (mobile) {
+    console.log(mobile)
     return (
       <div className="mobile-work">
         {podcasts.map((podcast, i) => (

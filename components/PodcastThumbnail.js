@@ -15,7 +15,7 @@ export const PodcastThumbnail = ({ podcast }) => {
     <li className='relative slide'>
       <a href={`/work/${podcast.fields.slug}`}>
         <div className={`border-image border-image${rndInt}`}></div>
-        <Image width={240} height={240} src={'https:' + imageUrl} alt={podcast.fields.thumbnail.fields.description} />
+        <Image width={230} height={230} src={'https:' + imageUrl} alt={podcast.fields.thumbnail.fields.description} />
       </a>
     </li>
   );

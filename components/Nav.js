@@ -1,56 +1,65 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { useWindowSize } from 'use-window-size-hook';
+import { useWindowSize } from "use-window-size-hook"
 import { Sling as Hamburger } from "hamburger-react"
 
 export const Nav = () => {
   const [isOpen, setOpen] = useState(false)
+  const [mobile, setMobile] = useState(false)
 
-  const {
-    width,
-  } = useWindowSize();
+  const { width } = useWindowSize();
 
-  if (width < 768) {
+  useEffect(()=> {
+    if(width < 768) {
+      setMobile(true)
+    }
+  }, [])
+
+  if (mobile) {
     return (
-      <nav style={{maxHeight: isOpen ? '300px' : '100px'}} className="navigation mobile">
+      <nav style={{ maxHeight: isOpen ? "300px" : "" }} className="navigation mobile">
         <div className="top-nav">
-          <Link href="/">
-            <a>
-              <Image
-                src="/assets/logo.png"
-                alt="3dB Logo"
-                width="100"
-                height="65"
-              />
-            </a>
-          </Link>
-          <Hamburger toggled={isOpen} toggle={setOpen} />
-        </div>
-          <div className="ham-menu">
-            <ul style={{maxHeight: isOpen ? '200px' : ''}} >
-              <li className="margin-nav">
-                <Link href="/about">
-                  <a>about</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/work">
-                  <a>work</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/team">
-                  <a>team</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact">
-                  <a>contact</a>
-                </Link>
-              </li>
-            </ul>
+          <div onClick={() => setOpen(false)} className="one">
+            <Link href="/">
+              <a>
+                <Image
+                  src="/assets/logo.png"
+                  alt="3dB Logo"
+                  width="100"
+                  height="65"
+                />
+              </a>
+            </Link>
           </div>
+          <div className="two">
+            <Hamburger toggled={isOpen} toggle={setOpen} />
+          </div>
+        </div>
+        <div className="ham-menu">
+          <ul>
+            <li onClick={() => setOpen(false)} className="margin-nav">
+              <Link  href="/about">
+                <a>about</a>
+              </Link>
+            </li>
+            <li onClick={() => setOpen(false)}>
+              <Link href="/work">
+                <a>work</a>
+              </Link>
+            </li>
+            <li onClick={() => setOpen(false)}>
+              <Link href="/team">
+                <a>team</a>
+              </Link>
+            </li>
+            <li onClick={() => setOpen(false)}>
+              <Link href="/contact">
+                <a>contact</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     );
   }

@@ -5,7 +5,6 @@ const Team = ({ teamMembers }) => {
   return (
     <div>
       <TeamMembers teamMembers={teamMembers} />
-      <div className="divider" />
     </div>
   );
 };
