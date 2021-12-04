@@ -1,54 +1,54 @@
-import { createClient } from "contentful";
-import { PodcastInfo } from "../../components/PodcastInfo";
+import { createClient } from 'contentful'
+import { PodcastInfo } from '../../components/PodcastInfo'
 
 export default function PodcastDetails({ podcast }) {
   return (
-    <div className="margin-top">
+    <div className='margin-top'>
       <PodcastInfo podcast={podcast} />
     </div>
-  );
+  )
 }
 
 export const getStaticPaths = async () => {
   const client = createClient({
     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-  });
+  })
 
   const response = await client.getEntries({
-    content_type: "podcast",
-  });
+    content_type: 'podcast',
+  })
 
   const paths = response.items.map((item) => {
     return {
       params: { slug: item.fields.slug },
-    };
-  });
+    }
+  })
 
   return {
     paths,
     fallback: true,
-  };
-};
+  }
+}
 
 export async function getStaticProps({ params }) {
   const client = createClient({
     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-  });
+  })
 
   const { items } = await client.getEntries({
-    content_type: "podcast",
-    "fields.slug": params.slug,
-  });
+    content_type: 'podcast',
+    'fields.slug': params.slug,
+  })
 
   if (!items.length) {
     return {
       redirect: {
-        destination: "/",
+        destination: '/',
         permanent: false,
       },
-    };
+    }
   }
 
   return {
@@ -56,5 +56,5 @@ export async function getStaticProps({ params }) {
       podcast: items[0],
     },
     revalidate: 1,
-  };
+  }
 }

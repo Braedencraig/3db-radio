@@ -1,5 +1,5 @@
 export const TeamMember = ({ member }) => {
-    const imageUrl = member.fields.thumbnail ? member.fields.thumbnail.fields.file.url : null;
+    const imageUrl = member.fields.thumbnail ? member.fields.thumbnail.fields.file.url : null
 
     function randomIntFromInterval(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min)
@@ -17,7 +17,7 @@ export const TeamMember = ({ member }) => {
             </div>
             <div className='flex-2'>
                 <h3>{member.fields.name}</h3>
-                {member.fields.description.content.map(text => <p>{text.content[0].value}</p>)}
+                {member.fields.description.content.map(text => <p key={text.content[0].value}>{text.content[0].value}</p>)}
             </div>
         </div>
     )

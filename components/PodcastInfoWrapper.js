@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { PodcastInfo } from "../components/PodcastInfo"
-import Slider from "react-slick"
+import { PodcastInfo } from '../components/PodcastInfo'
+import Slider from 'react-slick'
 
 export const PodcastInfoWrapper = ({ podcasts }) => {
   const [mobile, setMobile] = useState(false)
@@ -13,26 +13,25 @@ export const PodcastInfoWrapper = ({ podcasts }) => {
 
   const settings = {
     centerMode: true,
-    centerPadding: "60px",
-    className: "slides",
+    centerPadding: '60px',
+    className: 'slides',
     variableWidth: true,
-  };
+  }
 
   if (mobile) {
-    console.log(mobile)
     return (
-      <div className="mobile-work">
-        {podcasts.map((podcast, i) => (
-          <PodcastInfo index={i} podcast={podcast} />
+      <div className='mobile-work'>
+        {podcasts.map((podcast) => (
+          <PodcastInfo key={podcast.sys.id} podcast={podcast} />
         ))}
       </div>
-    );
+    )
   }
   return (
     <Slider {...settings}>
-      {podcasts.map((podcast, i) => (
-        <PodcastInfo index={i} podcast={podcast} />
+      {podcasts.map((podcast) => (
+        <PodcastInfo key={podcast.sys.id} podcast={podcast} />
       ))}
     </Slider>
-  );
-};
+  )
+}

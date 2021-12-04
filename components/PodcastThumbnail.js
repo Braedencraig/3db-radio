@@ -18,5 +18,5 @@ export const PodcastThumbnail = ({ podcast }) => {
         <Image width={230} height={230} src={'https:' + imageUrl} alt={podcast.fields.thumbnail.fields.description} />
       </a>
     </li>
-  );
+  )
 }

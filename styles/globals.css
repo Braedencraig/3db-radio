@@ -92,7 +92,7 @@ body:after {
   max-width: 1300px;
   margin: 20px auto 80px;
   padding: 0 20px;
-  width: 100%;
+  width: 80%;
   box-sizing: border-box;
 }
 
@@ -104,7 +104,7 @@ body:after {
   border-bottom: 1px solid #000000;
   position: relative;
   z-index: 10;
-  max-height: 100px;
+  max-height: auto;
   transition: max-height 0.45s ease-in-out;
   overflow: hidden;
 }
@@ -151,7 +151,7 @@ a {
 .border {
   margin-top: 57px;
   border: 25px solid transparent;
-  padding: 100px;
+  padding: 60px;
   border-image: url("/assets/largeborder.png") 45 stretch;
 }
 
@@ -713,7 +713,7 @@ p{
   }
 
   .flex-2 p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -722,6 +722,10 @@ p{
     padding: 10px;
     width: 100%;
     margin-bottom: 0;
+  }
+
+  .navigation {
+    max-height: 100px;
   }
 
   .divider {

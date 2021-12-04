@@ -3,8 +3,8 @@ import { Manifesto } from '../components/Manifesto'
 import { Meta } from '../components/Meta'
 import { PodcastInfoWrapper } from '../components/PodcastInfoWrapper'
 import { PodcastThumbnailWrapper } from '../components/PodcastThumbnailWrapper'
-import { TeamMembers } from '../components/TeamMembers';
-import { Contact } from '../components/Contact';
+import { TeamMembers } from '../components/TeamMembers'
+import { Contact } from '../components/Contact'
 
 
 export default function Homepage({ podcasts, teamMembers, information, seo, contactInfo }) {

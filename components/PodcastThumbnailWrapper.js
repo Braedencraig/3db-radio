@@ -6,10 +6,10 @@ export const PodcastThumbnailWrapper = ({ podcasts }) => {
   return (
     <div className='slider'>
       <ul>
-        {newImgArr.map((podcast) => (
-          <PodcastThumbnail podcast={podcast} />
+        {newImgArr.map((podcast, i) => (
+          <PodcastThumbnail podcast={podcast} key={`${podcast.sys.id}${i}`} />
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
