@@ -719,8 +719,12 @@ p{
   }
 
   .navigation {
-    height: 150px;
+    height: 120px;
     margin-top: 10px;
+  }
+
+  .navigation img {
+    height: 100px;
   }
 }
 
@@ -730,7 +734,7 @@ p{
   }
 
   .border {
-    padding: 50px;
+    padding: 10px;
   }
 
   .mobile-work {
@@ -770,6 +774,10 @@ p{
     padding: 10px;
     width: 100%;
     margin-bottom: 0;
+  }
+
+  .top-nav {
+    margin-top: 0;
   }
 
   .navigation {
