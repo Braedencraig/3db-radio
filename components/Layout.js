@@ -3,6 +3,7 @@ import { Nav } from '../components/Nav'
 export default function Layout({ children }) {
   return (
     <div className='layout'>
+      {/* MAKE A COMPONENT */}
       <div className='dot-top'></div>
       <div className='dot-bottom'></div>
       <div className='dot-mid1'></div>

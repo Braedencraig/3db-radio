@@ -13,9 +13,9 @@ export default function Homepage({ podcasts, teamMembers, information, seo, cont
       <Meta seo={seo} />
       <h1 style={{display: 'none'}}>3dB</h1>
       <Manifesto information={information} />
-      <div className='divider special' />
+      <div className='divider special-top' />
       <PodcastInfoWrapper podcasts={podcasts} />
-      <div className='divider' />
+      <div className='divider special-bottom' />
       <PodcastThumbnailWrapper podcasts={podcasts} />
       <div className='divider' />
       <TeamMembers teamMembers={teamMembers} />

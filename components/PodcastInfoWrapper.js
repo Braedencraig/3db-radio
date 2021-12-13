@@ -18,15 +18,15 @@ export const PodcastInfoWrapper = ({ podcasts }) => {
     variableWidth: true,
   }
 
-  if (mobile) {
-    return (
-      <div className='mobile-work'>
-        {podcasts.map((podcast) => (
-          <PodcastInfo key={podcast.sys.id} podcast={podcast} />
-        ))}
-      </div>
-    )
-  }
+  // if (mobile) {
+  //   return (
+  //     <div className='mobile-work'>
+  //       {podcasts.map((podcast) => (
+  //         <PodcastInfo key={podcast.sys.id} podcast={podcast} />
+  //       ))}
+  //     </div>
+  //   )
+  // }
   return (
     <Slider {...settings}>
       {podcasts.map((podcast) => (

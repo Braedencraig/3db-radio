@@ -23,12 +23,7 @@ export const Nav = () => {
           <div onClick={() => setOpen(false)} className='one'>
             <Link href='/'>
               <a>
-                <Image
-                  src='/assets/logo.png'
-                  alt='3dB Logo'
-                  width='100'
-                  height='65'
-                />
+                <img src='/assets/logo.png' alt="3dB logo" />
               </a>
             </Link>
           </div>
@@ -69,12 +64,7 @@ export const Nav = () => {
         <li>
           <Link href='/'>
             <a>
-              <Image
-                src='/assets/logo.png'
-                alt='3dB Logo'
-                width='200'
-                height='125'
-              />
+              <img src='/assets/logo.png' alt="3dB logo" />
             </a>
           </Link>
         </li>

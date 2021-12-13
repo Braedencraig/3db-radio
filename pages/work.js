@@ -11,6 +11,7 @@ function Work({ podcasts, seo }) {
       <PodcastThumbnailWrapper podcasts={podcasts} />
       <div className='divider' />
       <PodcastInfoWrapper podcasts={podcasts} />
+      <div className='divider' />
     </>
   )
 }
