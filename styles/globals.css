@@ -158,6 +158,8 @@ a {
 
 .border {
   margin-top: 60px;
+  position: relative;
+  z-index: 10;
   border: 25px solid transparent;
   padding: 20px;
   border-image: url("/assets/largeborder.png") 45 stretch;
@@ -197,26 +199,11 @@ a {
   border-image: url("/assets/mediumborder.png") 45 stretch;
 }
 
-/* .work-slide {
-  margin: 50px auto;
-  min-width: 950px !important;
-  width: 950px !important;
-  min-height: 350px !important;
-  max-height: 350px !important;
-  border: 35px solid transparent;
-  padding: 25px;
-  border-image: url("/assets/mediumborder.png") 45 stretch;
-} */
-
 .slick-next:before,
 .slick-prev:before {
   fill: black !important;
   color: black !important;
 }
-
-/* .slick-current {
-  margin: 50px !important;
-} */
 
 .flex-2 h3 {
   font-size: 24px;
@@ -391,8 +378,8 @@ a {
   margin-top: 100px;
 }
 
-.dot-top {
-  animation: xAxis 15.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+.dot-1 {
+  animation: xAxis 15.5s infinite cubic-bezier(0.02, 0.01, 0.41, 1);
   position: absolute;
   top: 5.4%;
   bottom: 93.72%;
@@ -400,203 +387,360 @@ a {
   left: 71.94%;
 }
 
-.dot-top::after {
+.dot-1::after {
   content: "";
   display: block;
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background-color: #da3b33;
+  background-image: url("/assets/blue.png");
+  /* background-color: #ADD8E6; */
   animation: yAxis 15.5s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
 }
 
 @keyframes yAxis {
-  50% {
-    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
-    transform: translateY(-100px);
-  }
-}
-
-@keyframes xAxis {
-  50% {
-    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 2.64);
-    transform: translateX(100px);
-  }
-}
-
-.dot-bottom {
-  animation: xAxis2 20.5s infinite cubic-bezier(0.02, 0.01, 0.41, 1);
-  position: absolute;
-  right: 74.26%;
-  left: 22.25%;
-  top: 75.07%;
-  bottom: 17.73%;
-}
-
-.dot-bottom::after {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  background-color: #da3b33;
-  animation: yAxis2 20.5s infinite cubic-bezier(0.3, 0.27, 0.07, 2.64);
-}
-
-@keyframes yAxis2 {
   50% {
     animation-timing-function: cubic-bezier(0.02, 0.01, 0.41, 1);
     transform: translateY(-100px);
   }
 }
 
-@keyframes xAxis2 {
+@keyframes xAxis {
   50% {
-    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 2.64);
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
     transform: translateX(100px);
   }
 }
 
-.dot-mid1 {
-  animation: xAxis3 15.5s infinite cubic-bezier(0.02, 0.01, 0.81, 1);
+.dot-2 {
+  animation: xAxis2 10.5s infinite cubic-bezier(0.22, 0.31, 0.1, 1.64);
   position: absolute;
-  left: 74.26%;
-  right: 22.25%;
-  top: 55.07%;
-  bottom: 17.73%;
+  top: 15.4%;
+  bottom: 83.72%;
+  left: 26.25%;
+  right: 71.94%;
 }
 
-.dot-mid1::after {
+.dot-2::after {
   content: "";
   display: block;
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background-color: #da3b33;
-  animation: yAxis3 15.5s infinite cubic-bezier(0.3, 0.47, 0.07, 2.64);
+  background-color: #ADD8E6;
+  animation: yAxis2 10.5s infinite cubic-bezier(0.3, 0.07, 0.07, 2.64);
+}
+
+@keyframes yAxis2 {
+  50% {
+    animation-timing-function: cubic-bezier(0.22, 0.31, 0.1, 1.64);
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes xAxis2 {
+  50% {
+    animation-timing-function: cubic-bezier(0.3, 0.07, 0.07, 2.64);
+    transform: translateX(100px);
+  }
+}
+
+.dot-3 {
+  animation: xAxis3 14.5s infinite cubic-bezier(0.22, 0.31, 0.1, 4.64);
+  position: absolute;
+  top: 22.4%;
+  bottom: 77.72%;
+  right: 26.25%;
+  left: 71.94%;
+}
+
+.dot-3::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #ADD8E6;
+  animation: yAxis3 14.5s infinite cubic-bezier(0.3, 0.07, 0.07, 3.64);
 }
 
 @keyframes yAxis3 {
   50% {
-    animation-timing-function: cubic-bezier(0.02, 0.01, 0.81, 1);
+    animation-timing-function: cubic-bezier(0.22, 0.31, 0.1, 4.64);
     transform: translateY(-100px);
   }
 }
 
 @keyframes xAxis3 {
   50% {
-    animation-timing-function: cubic-bezier(0.3, 0.47, 0.07, 2.64);
+    animation-timing-function: cubic-bezier(0.3, 0.07, 0.07, 3.64);
     transform: translateX(100px);
   }
 }
 
-.dot-mid2 {
-  animation: xAxis4 15.5s infinite cubic-bezier(0.02, 0.01, 0.31, 1);
+.dot-4 {
+  animation: xAxis4 8.5s infinite cubic-bezier(0.22, 0.41, 0.3, 4.64);
   position: absolute;
-  right: 74.26%;
-  left: 22.25%;
-  top: 55.07%;
-  bottom: 17.73%;
+  top: 35.4%;
+  bottom: 57.72%;
+  right: 46.25%;
+  left: 51.94%;
 }
 
-.dot-mid2::after {
+.dot-4::after {
   content: "";
   display: block;
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background-color: #da3b33;
-  animation: yAxis4 15.5s infinite cubic-bezier(0.6, 0.47, 0.07, 1.64);
+  background-color: #ADD8E6;
+  animation: yAxis4 8.5s infinite cubic-bezier(0.6, 0.07, 0.07, 1.64);
 }
 
 @keyframes yAxis4 {
   50% {
-    animation-timing-function: cubic-bezier(0.02, 0.01, 0.31, 1);
+    animation-timing-function: cubic-bezier(0.22, 0.41, 0.3, 4.64);
     transform: translateY(-100px);
   }
 }
 
 @keyframes xAxis4 {
   50% {
-    animation-timing-function: cubic-bezier(0.6, 0.47, 0.07, 1.64);
+    animation-timing-function: cubic-bezier(0.6, 0.07, 0.07, 1.64);
     transform: translateX(100px);
   }
 }
 
-.dot-mid3 {
-  animation: xAxis4 15.5s infinite cubic-bezier(0.02, 0.01, 0.31, 1);
+.dot-5 {
+  animation: xAxis5 14.5s infinite cubic-bezier(0.22, 0.41, 0.3, 7.64);
   position: absolute;
-  right: 74.26%;
-  left: 22.25%;
-  top: 30.07%;
-  bottom: 17.73%;
+  top: 45.4%;
+  bottom: 50%;
+  right: 36.25%;
+  left: 21.94%;
 }
 
-.dot-mid3::after {
+.dot-5::after {
   content: "";
   display: block;
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background-color: #da3b33;
-  animation: yAxis4 15.5s infinite cubic-bezier(0.6, 0.47, 0.07, 1.64);
+  background-color: #ADD8E6;
+  animation: yAxis5 14.5s infinite cubic-bezier(0.9, 0.27, 0.07, 4.64);
 }
 
-.dot-mid4 {
-  animation: xAxis3 15.5s infinite cubic-bezier(0.02, 0.01, 0.31, 1);
+@keyframes yAxis5 {
+  50% {
+    animation-timing-function: cubic-bezier(0.62, 0.41, 0.9, 7.64);
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes xAxis5 {
+  50% {
+    animation-timing-function: cubic-bezier(0.9, 0.27, 0.07, 4.64);
+    transform: translateX(100px);
+  }
+}
+
+.dot-6 {
+  animation: xAxis6 16.5s infinite cubic-bezier(0.62, 0.21, 0.4, 2.64);
   position: absolute;
-  right: 74.26%;
-  left: 22.25%;
-  top: 35.07%;
-  bottom: 17.73%;
+  top: 62.4%;
+  bottom: 30%;
+  right: 42.25%;
+  left: 41.94%;
 }
 
-.dot-mid4::after {
+.dot-6::after {
   content: "";
   display: block;
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background-color: #da3b33;
-  animation: yAxis3 15.5s infinite cubic-bezier(0.6, 0.47, 0.07, 1.64);
+  background-color: #ADD8E6;
+  animation: yAxis6 16.5s infinite cubic-bezier(0.4, 0.34, 0.06, 3.64);
 }
 
-.dot-mid5 {
-  animation: xAxis3 15.5s infinite cubic-bezier(0.02, 0.01, 0.31, 1);
+@keyframes yAxis6 {
+  50% {
+    animation-timing-function: cubic-bezier(0.62, 0.21, 0.4, 2.64);
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes xAxis6 {
+  50% {
+    animation-timing-function: cubic-bezier(0.4, 0.34, 0.06, 3.64);
+    transform: translateX(100px);
+  }
+}
+
+.dot-7 {
+  animation: xAxis7 11.5s infinite cubic-bezier(0.22, 0.11, 0.4, 3.64);
   position: absolute;
-  right: 54.26%;
+  top: 92.4%;
+  bottom: 5%;
+  left: 32.25%;
+  right: 83.94%;
+}
+
+.dot-7::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #ADD8E6;
+  animation: yAxis7 25.5s infinite cubic-bezier(0.8, 0.44, 0.08, 3.64);
+}
+
+@keyframes yAxis7 {
+  50% {
+    animation-timing-function: cubic-bezier(0.22, 0.41, 0.4, 6.64);
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes xAxis7 {
+  50% {
+    animation-timing-function: cubic-bezier(0.8, 0.44, 0.08, 3.64);
+    transform: translateX(100px);
+  }
+}
+
+.dot-8 {
+  animation: xAxis8 25.5s infinite cubic-bezier(0.22, 0.41, 0.4, 6.64);
+  position: absolute;
+  top: 62.4%;
+  bottom: 20%;
+  right: 32.25%;
+  left: 63.94%;
+}
+
+.dot-8::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #ADD8E6;
+  animation: yAxis8 11.5s infinite cubic-bezier(0.4, 0.44, 0.08, 5.64);
+}
+
+@keyframes yAxis8 {
+  50% {
+    animation-timing-function: cubic-bezier(0.22, 0.11, 0.4, 3.64);
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes xAxis8 {
+  50% {
+    animation-timing-function: cubic-bezier(0.4, 0.44, 0.08, 5.64);
+    transform: translateX(100px);
+  }
+}
+
+.dot-9 {
+  animation: xAxis9 8.5s infinite cubic-bezier(0.22, 0.41, 0.4, 1.64);
+  position: absolute;
+  top: 82.4%;
+  bottom: 15%;
+  right: 12.25%;
+  left: 83.94%;
+}
+
+.dot-9::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #ADD8E6;
+  animation: yAxis9 8.5s infinite cubic-bezier(0.4, 0.44, 0.08, 2.64);
+}
+
+@keyframes yAxis9 {
+  50% {
+    animation-timing-function: cubic-bezier(0.22, 0.41, 0.4, 1.64);
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes xAxis9 {
+  50% {
+    animation-timing-function: cubic-bezier(0.4, 0.44, 0.08, 2.64);
+    transform: translateX(100px);
+  }
+}
+
+
+.dot-10 {
+  animation: xAxis10 15.5s infinite cubic-bezier(0.52, 0.71, 0.4, 2.64);
+  position: absolute;
+  top: 32.4%;
+  bottom: 75%;
+  left: 32.25%;
+  right: 63.94%;
+}
+
+.dot-10::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #ADD8E6;
+  animation: yAxis10 15.5s infinite cubic-bezier(0.2, 0.14, 0.08, 5.64);
+}
+
+@keyframes yAxis10 {
+  50% {
+    animation-timing-function: cubic-bezier(0.52, 0.71, 0.4, 2.64);
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes xAxis10 {
+  50% {
+    animation-timing-function: cubic-bezier(0.2, 0.14, 0.08, 5.64);
+    transform: translateX(100px);
+  }
+}
+
+.dot-10 {
+  animation: xAxis2 12.5s infinite cubic-bezier(0.52, 0.71, 0.4, 2.64);
+  position: absolute;
+  top: 82.4%;
+  bottom: 10%;
   left: 42.25%;
-  top: 40.07%;
-  bottom: 17.73%;
+  right: 53.94%;
 }
 
-.dot-mid5::after {
+.dot-10::after {
   content: "";
   display: block;
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background-color: #da3b33;
-  animation: yAxis3 15.5s infinite cubic-bezier(0.6, 0.47, 0.07, 1.64);
+  background-color: #ADD8E6;
+  animation: yAxis2 12.5s infinite cubic-bezier(0.2, 0.14, 0.08, 5.64);
 }
 
-.dot-mid6 {
-  animation: xAxis2 15.5s infinite cubic-bezier(0.02, 0.01, 0.31, 1);
-  position: absolute;
-  left: 74.26%;
-  right: 22.25%;
-  top: 80.07%;
-  bottom: 17.73%;
+@keyframes yAxis2 {
+  50% {
+    animation-timing-function: cubic-bezier(0.52, 0.71, 0.4, 2.64);
+    transform: translateY(-100px);
+  }
 }
 
-.dot-mid6::after {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  background-color: #da3b33;
-  animation: yAxis2 15.5s infinite cubic-bezier(0.6, 0.47, 0.07, 1.64);
+@keyframes xAxis2 {
+  50% {
+    animation-timing-function: cubic-bezier(0.2, 0.14, 0.08, 5.64);
+    transform: translateX(100px);
+  }
 }
 
 .top-nav {
@@ -914,6 +1058,4 @@ p {
   .relative {
     margin-right: 0;
   }
-
 }
-

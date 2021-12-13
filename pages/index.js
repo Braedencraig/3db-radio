@@ -5,12 +5,15 @@ import { PodcastInfoWrapper } from '../components/PodcastInfoWrapper'
 import { PodcastThumbnailWrapper } from '../components/PodcastThumbnailWrapper'
 import { TeamMembers } from '../components/TeamMembers'
 import { Contact } from '../components/Contact'
+import { DotMagic } from '../components/DotMagic'
+
 
 
 export default function Homepage({ podcasts, teamMembers, information, seo, contactInfo }) {
   return (
     <>
       <Meta seo={seo} />
+      <DotMagic num={11} />
       <h1 style={{display: 'none'}}>3dB</h1>
       <Manifesto information={information} />
       <div className='divider special-top' />

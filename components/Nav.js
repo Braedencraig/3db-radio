@@ -1,20 +1,23 @@
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
-import { useWindowSize } from 'use-window-size-hook'
+import {
+  useWindowSize,
+} from '@react-hook/window-size'
 import { Sling as Hamburger } from 'hamburger-react'
 
 export const Nav = () => {
   const [isOpen, setOpen] = useState(false)
   const [mobile, setMobile] = useState(false)
 
-  const { width } = useWindowSize()
+  const [width, height] = useWindowSize()
 
   useEffect(()=> {
     if(width < 768) {
       setMobile(true)
+    } else {
+      setMobile(false)  
     }
-  }, [])
+  }, [width])
 
   if (mobile) {
     return (
@@ -23,7 +26,7 @@ export const Nav = () => {
           <div onClick={() => setOpen(false)} className='one'>
             <Link href='/'>
               <a>
-                <img src='/assets/logo.png' alt="3dB logo" />
+                <img src='/assets/logo.png' alt='3dB logo' />
               </a>
             </Link>
           </div>
@@ -64,7 +67,7 @@ export const Nav = () => {
         <li>
           <Link href='/'>
             <a>
-              <img src='/assets/logo.png' alt="3dB logo" />
+              <img src='/assets/logo.png' alt='3dB logo' />
             </a>
           </Link>
         </li>
