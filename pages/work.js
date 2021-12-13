@@ -2,11 +2,14 @@ import { createClient } from 'contentful'
 import { PodcastInfoWrapper } from '../components/PodcastInfoWrapper'
 import { PodcastThumbnailWrapper } from '../components/PodcastThumbnailWrapper'
 import { Meta } from '../components/Meta'
+import { DotMagic } from '../components/DotMagic'
+
 
 function Work({ podcasts, seo }) {
   return (
     <>
       <Meta seo={seo} />
+      <DotMagic num={6} />
       <h1 style={{display: 'none'}}>3dB</h1>
       <PodcastThumbnailWrapper podcasts={podcasts} />
       <div className='divider' />

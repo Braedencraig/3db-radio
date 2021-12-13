@@ -1,9 +1,12 @@
 import { createClient } from 'contentful'
 import { TeamMembers } from '../components/TeamMembers'
+import { DotMagic } from '../components/DotMagic'
+
 
 const Team = ({ teamMembers }) => {
   return (
     <div>
+      <DotMagic num={8} />
       <TeamMembers teamMembers={teamMembers} />
     </div>
   )

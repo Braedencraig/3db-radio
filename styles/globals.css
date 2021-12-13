@@ -481,8 +481,8 @@ a {
 .dot-4 {
   animation: xAxis4 8.5s infinite cubic-bezier(0.22, 0.41, 0.3, 4.64);
   position: absolute;
-  top: 35.4%;
-  bottom: 57.72%;
+  top: 65.4%;
+  bottom: 37.72%;
   right: 46.25%;
   left: 51.94%;
 }

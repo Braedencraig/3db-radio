@@ -1,12 +1,15 @@
 import { createClient } from 'contentful'
 import { Manifesto } from '../components/Manifesto'
 import { TeamMembers } from '../components/TeamMembers'
+import { DotMagic } from '../components/DotMagic'
+
 
 function About({ information, teamMembers }) {
 
   return (
     <>
       <Manifesto information={information} />
+      <DotMagic num={8} />
       <div className='divider' />
       <TeamMembers teamMembers={teamMembers} />
     </>
