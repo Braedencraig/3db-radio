@@ -393,8 +393,7 @@ a {
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background-image: url("/assets/blue.png");
-  /* background-color: #ADD8E6; */
+  background-color: #ADD8E6;
   animation: yAxis 15.5s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
 }
 
