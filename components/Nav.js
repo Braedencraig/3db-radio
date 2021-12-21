@@ -21,7 +21,8 @@ export const Nav = () => {
 
   if (mobile) {
     return (
-      <nav style={{ maxHeight: isOpen ? '300px' : '' }} className='navigation mobile'>
+      // <nav style={{ maxHeight: isOpen ? '300px' : '' }} className='navigation mobile'>
+      <nav style={{ maxHeight: '300px' }} className='navigation mobile'>
         <div className='top-nav'>
           <div onClick={() => setOpen(false)} className='one'>
             <Link href='/'>
@@ -30,9 +31,9 @@ export const Nav = () => {
               </a>
             </Link>
           </div>
-          <div className='two'>
+          {/* <div className='two'>
             <Hamburger toggled={isOpen} toggle={setOpen} />
-          </div>
+          </div> */}
         </div>
         <div className='ham-menu'>
           <ul>

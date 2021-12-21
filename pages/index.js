@@ -13,7 +13,35 @@ export default function Homepage({ podcasts, teamMembers, information, seo, cont
   return (
     <>
       <Meta seo={seo} />
-      <DotMagic num={11} />
+      <DotMagic 
+        num={30} 
+        positionArr={[
+          {top: '4%', right: '26%'},
+          {top: '8%', left: '22%'},
+          {top: '12%', right: '18%'},
+          {top: '16%', left: '33%'},
+          {top: '20%', left: '25%'},
+          {top: '24%', left: '4%'},
+          {top: '28%', right: '41%'},
+          {top: '32%', right: '31%'},
+          {top: '36%', right: '6%'},
+          {top: '40%', left: '20%'},
+          {top: '44%', left: '8%'},
+          {top: '48%', right: '26%'},
+          {top: '52%', right: '18%'},
+          {top: '56%', left: '33%'},
+          {top: '60%', left: '45%'},
+          {top: '64%', left: '11%'},
+          {top: '68%', right: '41%'},
+          {top: '72%', right: '31%'},
+          {top: '76%', right: '6%'},
+          {top: '80%', left: '20%'},
+          {top: '84%', left: '50%'},
+          {top: '88%', left: '40%'},
+          {top: '92%', left: '80%'},
+          {top: '96%', left: '610%'},
+        ]} 
+      />
       <h1 style={{display: 'none'}}>3dB</h1>
       <Manifesto information={information} />
       <div className='divider special-top' />
