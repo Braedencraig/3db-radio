@@ -6,24 +6,7 @@ import { DotMagic } from '../components/DotMagic'
 const Team = ({ teamMembers }) => {
   return (
     <div>
-      <DotMagic num={16} positionArr={[
-          {top: '6%', right: '26%'},
-          {top: '12%', left: '22%'},
-          {top: '18%', right: '18%'},
-          {top: '24%', left: '33%'},
-          {top: '30%', left: '25%'},
-          {top: '36%', left: '4%'},
-          {top: '42%', right: '41%'},
-          {top: '48%', right: '31%'},
-          {top: '54%', right: '6%'},
-          {top: '60%', left: '20%'},
-          {top: '66%', left: '8%'},
-          {top: '72%', right: '26%'},
-          {top: '78%', right: '18%'},
-          {top: '84%', left: '33%'},
-          {top: '90%', left: '45%'},
-          {top: '96%', left: '11%'},
-        ]} />
+      <DotMagic num={20} />
       <TeamMembers teamMembers={teamMembers} />
     </div>
   )

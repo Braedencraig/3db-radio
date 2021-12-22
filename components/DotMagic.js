@@ -1,9 +1,15 @@
 import React from 'react'
 
-export const DotMagic = ({ num, positionArr }) => {
+export const DotMagic = ({ num }) => {
   let dotArr = []
   for (let i = 1; i <= num; i++) {
-    dotArr.push({class: `dot-${i}`, position: positionArr[i-1]})
+    const randomIntTop = Math.floor(Math.random() * 101)
+    const randomIntLeft = Math.floor(Math.random() * 101)
+    const positions = {
+      top: `${randomIntTop}%`,
+      left: `${randomIntLeft}%`,
+    }
+    dotArr.push({class: `dot-${i}`, position: positions})
   }
 
   return dotArr.map((dot) => 
