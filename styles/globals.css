@@ -1556,6 +1556,10 @@ p {
     margin-bottom: 300px;
   }
 
+  .slide .border-image {
+    left: 15px;
+  }
+
   .two {
     display: none;
   }
