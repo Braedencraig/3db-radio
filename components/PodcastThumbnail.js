@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export const PodcastThumbnail = ({ podcast }) => {
     const imageUrl = podcast.fields.thumbnail
     ? podcast.fields.thumbnail.fields.file.url
@@ -15,7 +13,8 @@ export const PodcastThumbnail = ({ podcast }) => {
     <li className='relative slide'>
       <a href={`/work/${podcast.fields.slug}`}>
         <div className={`border-image border-image${rndInt}`}></div>
-        <Image width={230} height={230} src={'https:' + imageUrl} alt={podcast.fields.thumbnail.fields.description} />
+        <img src={'https:' + imageUrl} alt={podcast.fields.thumbnail.fields.description} />
+        {/* <Image width={230} height={230} src={'https:' + imageUrl} alt={podcast.fields.thumbnail.fields.description} /> */}
       </a>
     </li>
   )
