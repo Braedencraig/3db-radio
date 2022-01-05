@@ -9,7 +9,7 @@ export const DotMagic = ({ num }) => {
       top: `${randomIntTop}%`,
       left: `${randomIntLeft}%`,
     }
-    dotArr.push({class: `dot-${i}`, position: positions})
+    dotArr.push({class: `dot dot-${i}`, position: positions})
   }
 
   return dotArr.map((dot) => 

@@ -21,9 +21,9 @@ export default function Homepage({
       <h1 style={{ display: "none" }}>3dB</h1>
       <Manifesto information={information} />
       <div className="divider special-top" />
-      <PodcastInfoWrapper podcasts={podcasts} />
-      <div className="divider special-bottom" />
       <PodcastThumbnailWrapper podcasts={podcasts} />
+      <div className="divider special-bottom" />
+      <PodcastInfoWrapper podcasts={podcasts} />
       <div className="divider" />
       <TeamMembers teamMembers={teamMembers} />
       <div className="divider" />
